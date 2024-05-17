@@ -9,6 +9,6 @@ import pm_extraction
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    # se_extraction.se_execute_extraction()
-    # pm_extraction.pm_execute_extraction()
+    se_extraction.se_execute_extraction()
+    pm_extraction.pm_execute_extraction()
     so_extraction.so_execute_extraction()

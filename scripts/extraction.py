@@ -37,9 +37,10 @@ def execute(archives_dir, archives_dict, output_dir, filters):
 
 
 def extraction_execute(archives_dir, data_files, output_questions, output_answers, flag):
-    # TODO: Put a flag checker, check for tags, body and title
+
     if flag == 'Tags':
         search = 'technical-debt'
+        back_up = 'tech-debt'
     else:
         search = 'technical debt'
         back_up = 'tech debt'

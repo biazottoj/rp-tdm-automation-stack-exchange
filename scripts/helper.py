@@ -3,6 +3,7 @@ import json
 import subprocess
 import re
 from lxml import etree
+import xml.etree.ElementTree as ET
 
 CHUNK_SIZE = 128 * 1024 * 1024
 
@@ -36,13 +37,15 @@ def extract_posts_section(archive_path, xml_filename, post_ids):
     command = [r'C:\Program Files\7-Zip\7z.exe', 'e', archive_path, xml_filename, '-so']
 
     with subprocess.Popen(command, stdout=subprocess.PIPE, bufsize=CHUNK_SIZE) as process:
-        context = etree.iterparse(process.stdout, events=('start', 'end'))
-        for event, elem in context:
+        context = ET.iterparse(process.stdout, events=('start', 'end'))
+        for index, (event, elem) in enumerate(context):
+            if index == 0:
+                root = elem
             if event == 'end' and elem.tag == 'row':
                 pid = elem.attrib.get('PostId', '')
                 if pid in post_ids:
                     yield pid, dict(elem.attrib)
-                elem.clear()
+                root.clear()
 
 
 def update_posts(archive_path, xml_filename, posts_dir, section):
