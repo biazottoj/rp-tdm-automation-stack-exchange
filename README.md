@@ -38,3 +38,17 @@ conda env remove -n se-extraction
 ```
 
 _Note: There is a p7zip dependency in the yaml file. The name of this dependency may differ in accordance with the OS being used_.
+
+# Week-by-week Documentation
+## Week 1-2
+* Stack Overflow, Software Engineering and Program Management 7z files were downloaded from the Stack Exchange [Data Dump](https://archive.org/details/stackexchange). We used the data dump from 2024-04-02. For SE & PM we downloaded them as single files whereas for SO we downloaded the separate files for Posts, Comments & PostHistory. This is because that is how the files are presented in the data dump.
+* My second supervisor supplied a base set of scripts for the data extraction, previously used and authored by the first supervisor in a previous project. We extended the code to sift through tags, titles & bodies. The code was also extended to not only look through SO but SE & PM as well such that the resulting questions were placed in their respective origin sites. The keywords used were technical debt and tech debt. These keywords were chosen because they were highlighted in a previous paper(to be linked) as popular keywords that referenced technical debt in SO.
+* The files are really huge, this led to errors in the parsing process, these were remedied by implementing (to be described)
+* Due to the new addition of code that looked through titles and bodies as well, some duplicate results were produced therefore we added a new functionality to remove the duplicate json files as this would simplify the process that was to come ahead.
+* We perused through the resulting questions to get an idea of how they were structured and how to move forward.
+
+## Week 3-5
+* A Github repository containing the scripts and their documentation was created to serve as documentation.
+* We went through the results and classified the questionS according to the TD types described in this paper(to be linked), questions that were methodology affiliated and those that are not directly related to TD but rather that the word TD was just used for context.
+* The second supervisor provided a requirements template (to be linked) that acts as a guideline on how to search for requirements.
+* A small sample of questions was taken from the results to get an idea on how to use the requirements template.
