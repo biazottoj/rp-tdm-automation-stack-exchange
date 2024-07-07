@@ -49,6 +49,22 @@ _Note: There is a p7zip dependency in the yaml file. The name of this dependency
 
 ## Week 3-5
 * A Github repository containing the scripts and their documentation was created to serve as documentation.
-* We went through the results and classified the questionS according to the TD types described in this paper(to be linked), questions that were methodology affiliated and those that are not directly related to TD but rather that the word TD was just used for context.
+* We went through the results and classified the questions as those that are relevant and irrelevant. The questions classified as irrelevant are those that are not directly related to TD but rather that the word TD was just used for context.
 * The second supervisor provided a requirements template (to be linked) that acts as a guideline on how to search for requirements.
 * A small sample of questions was taken from the results to get an idea on how to use the requirements template.
+
+## Week 6-8
+* Attempted to put questions into ATLAS.ti but it does not support json files. Therefore we created a script to change the json files to txt files.
+* Imported TD-related questions as txt files into ATLAS.ti with each site as a different project to avoid the erasure of questions which may have the same post number but from different sites.
+* Once the questions were imported we started open coding. We highlighted phrases that described the context in which TD was described and assigned codes to these accordingly.
+* Once we were done with the open coding for all questions, we started the axial coding in which we grouped the codes into categories. The categories we grouped them under are the TD question categories provided by [Alfayez et al.](https://link.springer.com/article/10.1007/s10664-022-10269-5)
+* After the axial coding was completed, we went through the questions classified under the categories linked with TD management practices looking for software requirements for TD tools.
+* We compiled a list of the requirements and perused through them looking for similarities. This led to the discovery of themes in which the requirements could be categorised under.
+* We further analyzed the requirements for trends through the progression of time, requirements that have been fulfilled and similar requests.
+
+## Week 9
+* Prepared for symposium presentation.
+
+## Week 10
+* Presented at symposium.
+* Began to write the thesis.
